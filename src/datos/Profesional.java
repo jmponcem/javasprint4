@@ -32,15 +32,17 @@ public class Profesional extends Usuario implements IAsesoria {
     @Override
     public String toString() {
         return "Profesional{" +
-                "titulo='" + titulo + '\'' +
+                "nombre='" + getNombre() + '\'' +
+                ", fecha='" + getFecha() + '\'' +
+                ", rut=" + getRut() + '\'' +
+                ", titulo='" + titulo + '\'' +
                 ", fecha_ingreso='" + fecha_ingreso + '\'' +
                 '}';
     }
 
-
     public void analizarUsuario() {
         super.analizarUsuario();
-        System.out.println("El titulo es: "+titulo);
-        System.out.println("La fecha de ingreso es: "+fecha_ingreso);
+        //System.out.println("El titulo es: " + titulo);
+        //System.out.println("La fecha de ingreso es: " + fecha_ingreso);
     }
 }

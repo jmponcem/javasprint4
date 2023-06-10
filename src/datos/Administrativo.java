@@ -1,6 +1,6 @@
 package datos;
 
-public class Administrativo extends Usuario implements IAsesoria{
+public class Administrativo extends Usuario implements IAsesoria {
     private String area;
     private String experiencia;
 
@@ -32,7 +32,10 @@ public class Administrativo extends Usuario implements IAsesoria{
     @Override
     public String toString() {
         return "Administrativo{" +
-                "area='" + area + '\'' +
+                "nombre='" + getNombre() + '\'' +
+                ", fecha='" + getFecha() + '\'' +
+                ", rut=" + getRut() + '\'' +
+                ", area='" + area + '\'' +
                 ", experiencia='" + experiencia + '\'' +
                 '}';
     }
@@ -40,7 +43,7 @@ public class Administrativo extends Usuario implements IAsesoria{
 
     public void analizarUsuario() {
         super.analizarUsuario();
-        System.out.println("El area: "+area);
-        System.out.println("La experiencia: "+experiencia);
+        //System.out.println("El area: " + area);
+        //System.out.println("La experiencia: " + experiencia);
     }
 }

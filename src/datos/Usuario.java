@@ -54,6 +54,7 @@ public class Usuario implements IAsesoria {
     @Override
     public void analizarUsuario() {
         System.out.println("EL nombre es: "+this.nombre);
+        System.out.println("La fecha es: "+this.fecha);
         System.out.println("EL rut es: "+this.rut);
     }
 

@@ -82,7 +82,10 @@ public class Cliente extends Usuario implements IAsesoria {
     @Override
     public String toString() {
         return "Cliente{" +
-                "apellidos='" + apellidos + '\'' +
+                "nombre='" + getNombre() + '\'' +
+                ", fecha='" + getFecha() + '\'' +
+                ", rut=" + getRut() + '\'' +
+                ", apellidos='" + apellidos + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", afp='" + afp + '\'' +
                 ", sistema_salud=" + sistema_salud +
@@ -91,17 +94,20 @@ public class Cliente extends Usuario implements IAsesoria {
                 ", edad=" + edad +
                 '}';
     }
+
     public void analizarUsuario() {
         super.analizarUsuario();
-        System.out.println("La direccion: "+direccion);
-        System.out.println(" La comuna: "+comuna);
+        //System.out.println("La direccion: " + direccion);
+        //System.out.println(" La comuna: " + comuna);
     }
-    public static String obtenerNombre(String nombre, String apellidos){
+
+    public static String obtenerNombre(String nombre, String apellidos) {
         String nombrecompleto;
-        nombrecompleto = "EL Nombre y el apellido: "+nombre+" "+apellidos;
+        nombrecompleto = "EL Nombre y el apellido: " + nombre + " " + apellidos;
         return nombrecompleto;
     }
-    public static void obtenerSistemaSalud(String sistema_salud){
-        System.out.println("El sistema de salud es: "+sistema_salud);
+
+    public static void obtenerSistemaSalud(String sistema_salud) {
+        System.out.println("El sistema de salud es: " + sistema_salud);
     }
 }

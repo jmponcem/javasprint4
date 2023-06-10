@@ -13,7 +13,9 @@ import static datos.ValidarCapacitacion.*;
 public class IngresarDatos {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        Contenedor contenedor = new Contenedor();
         int opcion;
+        int op;
 
         do {
             System.out.println("Menú:");
@@ -32,35 +34,52 @@ public class IngresarDatos {
             switch (opcion) {
                 case 1:
                     System.out.println("Ha seleccionado la opción 1.");
-                    almacenarCliente();
+                    contenedor.almacenarCliente();
                     break;
                 case 2:
                     System.out.println("Ha seleccionado la opción 2.");
-                    almacenarProfesional();
+                    contenedor.almacenarProfesional();
                     break;
                 case 3:
                     System.out.println("Ha seleccionado la opción 3.");
-                    almacenarAdministrativo();
+                    contenedor.almacenarAdministrativo();
                     break;
                 case 4:
                     System.out.println("Ha seleccionado la opción 4.");
-                    almacenarCapacitacion();
+                    contenedor.almacenarCapacitacion();
                     break;
                 case 5:
                     System.out.println("Ha seleccionado la opción 5.");
-
+                    contenedor.eliminarUsuario();
                     break;
                 case 6:
                     System.out.println("Ha seleccionado la opción 6.");
-                    listarUsuarios();
+                    contenedor.listarUsuarios();
                     break;
                 case 7:
                     System.out.println("Ha seleccionado la opción 7.");
-                    listarPorTipo();
-                    break;
+                    System.out.println("1. Listar Cliente");
+                    System.out.println("2. Listar Administrativo");
+                    System.out.println("3. Listar Profesional");
+                    System.out.print("Ingrese una opción: ");
+                    op = entrada.nextInt();
+                    switch (op) {
+                        case 1:
+                            System.out.println("Lista Clientes.");
+                            contenedor.listarPorTipo(op);
+                            break;
+                        case 2:
+                            System.out.println("Lista Administrativo.");
+                            contenedor.listarPorTipo( op);
+                            break;
+                        case 3:
+                            System.out.println("Lista Profesional.");
+                            contenedor.listarPorTipo(op);
+                            break;
+                    }break;
                 case 8:
                     System.out.println("Ha seleccionado la opción 8.");
-                    listarCapacitacion();
+                    contenedor.listarCapacitacion();
                     break;
                 case 0:
                     System.out.println("Saliendo del programa...");
@@ -68,7 +87,7 @@ public class IngresarDatos {
                 default:
                     System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
             }
-            System.out.println(); // Línea en blanco para separar las iteraciones
+            System.out.println();
         } while (opcion != 0);
 
         //entrada.close();
