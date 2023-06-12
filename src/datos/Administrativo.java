@@ -46,4 +46,9 @@ public class Administrativo extends Usuario implements IAsesoria {
         //System.out.println("El area: " + area);
         //System.out.println("La experiencia: " + experiencia);
     }
+    public void analizarUsuario(String area,String experiencia) {
+        super.analizarUsuario();
+        System.out.println("El area: " + area);
+        System.out.println("La experiencia: " + experiencia);
+    }
 }

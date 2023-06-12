@@ -67,4 +67,9 @@ public class Usuario implements IAsesoria {
         System.out.println("El usuario tiene: "+edad+" años");
     }
 
+    public void analizarUsuario(String nombre, String rut) {
+        System.out.println("El nombre es: "+nombre);
+        System.out.println("El rut es :"+rut);
+    }
+
 }

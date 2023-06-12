@@ -45,4 +45,9 @@ public class Profesional extends Usuario implements IAsesoria {
         //System.out.println("El titulo es: " + titulo);
         //System.out.println("La fecha de ingreso es: " + fecha_ingreso);
     }
+    public void analizarUsuario(String titulo, String fecha_ingreso) {
+        super.analizarUsuario();
+        System.out.println("El titulo es: " + titulo);
+        System.out.println("La fecha de ingreso es: " + fecha_ingreso);
+    }
 }

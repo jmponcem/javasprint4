@@ -13,6 +13,7 @@ import static datos.ValidarUsuario.*;
 import static datos.ValidarUsuario.validarFecha;
 
 public class Contenedor {
+    public Capacitacion capacitacion;
     List<IAsesoria> lista = new ArrayList<>();
 
     List<Capacitacion> listacap = new ArrayList<>();
@@ -88,19 +89,21 @@ public class Contenedor {
 
     public void listarPorTipo(int op) {
 
+        List<String> listacli = new ArrayList<>();
         List<String> listapro = new ArrayList<>();
         List<String> listaadm = new ArrayList<>();
-        List<String> listacli = new ArrayList<>();
+
         for (IAsesoria l : lista) {
+            if (l instanceof Cliente) {
+                listacli.add(l.toString());
+            }
             if (l instanceof Profesional) {
                 listapro.add(l.toString());
             }
             if (l instanceof Administrativo) {
                 listaadm.add(l.toString());
             }
-            if (l instanceof Cliente) {
-                listacli.add(l.toString());
-            }
+
         }
         int contador = 1;
         if (op == 1) {
@@ -182,15 +185,6 @@ public class Contenedor {
             lista.remove(usuarioEliminar);
             System.out.println("usuario eliminado");
         }
-
-        /*for (int i = 0; i < lista.toArray().length; i++) {
-            String elemento = lista.get(i).toString();
-            if (elemento.contains(rut)) {
-                System.out.println(elemento);
-                System.out.println("usuario eliminado");
-                lista.remove(i);
-            }
-        }*/
         contador = 1;
         System.out.println("Nueva lista");
         for (IAsesoria l : lista) {

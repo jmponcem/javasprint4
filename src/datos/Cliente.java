@@ -100,6 +100,11 @@ public class Cliente extends Usuario implements IAsesoria {
         //System.out.println("La direccion: " + direccion);
         //System.out.println(" La comuna: " + comuna);
     }
+    public void analizarUsuario(String direccion,String comuna) {
+        super.analizarUsuario();
+        System.out.println("La direccion: " + direccion);
+        System.out.println(" La comuna: " + comuna);
+    }
 
     public static String obtenerNombre(String nombre, String apellidos) {
         String nombrecompleto;

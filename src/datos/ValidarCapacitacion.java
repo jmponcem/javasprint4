@@ -79,7 +79,7 @@ public class ValidarCapacitacion {
         }
     }
 
-    /*public static String validarOrigen(Scanner entrada){
+    public static String validarOrigen(Scanner entrada){
         String origen;
         while (true){
             System.out.print("ingrese origen: ");
@@ -90,7 +90,7 @@ public class ValidarCapacitacion {
                 System.out.println("Debe ingresar el origen menor a 100 caracteres");
             }
         }
-    }*/
+    }
 
     public static String validarDuracion(Scanner entrada) {
         String duracion;
